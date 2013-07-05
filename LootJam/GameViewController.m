@@ -257,4 +257,8 @@
 
 
 
+- (IBAction)onResetTapped:(id)sender {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.navController popToRootViewControllerAnimated:YES];
+}
 @end

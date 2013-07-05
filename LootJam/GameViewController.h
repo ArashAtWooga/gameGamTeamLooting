@@ -23,6 +23,7 @@
     
     GameInstance* game;
 }
+- (IBAction)onResetTapped:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIImageView *firstSelectedCell;
 @property (strong, nonatomic) IBOutlet UIImageView *secondSelectedCell;
