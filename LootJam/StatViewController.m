@@ -28,7 +28,7 @@
     player1stats = [[CharacterStats alloc] init];
     player2stats = [[CharacterStats alloc] init];
     
-    self.gameLimit.text = @"4";
+    self.gameLimit.text = @"5";
     self.gameSize.text = @"4";
     
     self.player1hp.text = @"25";
