@@ -149,19 +149,36 @@
 
 -(BOOL)cellsSelectedDiagnal:(NSMutableArray *)selectedCells
 {
-    int sumOfRows = 0;
-    int sumOfCols = 0;
-    
-    for (int i = 0; i < selectedCells.count; i++) {
-        for (int j = i + 1; j < selectedCells.count; j++) {
-            Cell *_cellOne = [selectedCells objectAtIndex:i];
-            Cell *_cellTwo = [selectedCells objectAtIndex:j];
-            
-            sumOfRows = sumOfRows + abs( [self gridPositionForCell:_cellOne].row - [self gridPositionForCell:_cellTwo].row );
-            sumOfCols = sumOfCols + abs( [self gridPositionForCell:_cellOne].column - [self gridPositionForCell:_cellTwo].column );
+    for (int i  = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            for (int k = 0; k < 3; k++) {
+                Cell *first, *second, *third;
+                CellGridPosition grid1, grid2, grid3;
+                first = [selectedCells objectAtIndex:i];
+                second = [selectedCells objectAtIndex:j];
+                third = [selectedCells objectAtIndex:k];
+                if (![second isEqual:first]) {
+                    if (![third isEqual:first] && ![third isEqual:second]) {
+                        grid1 = [self gridPositionForCell:first];
+                        grid2 = [self gridPositionForCell:second];
+                        grid3 = [self gridPositionForCell:third];
+                        
+                        if ([self isDiagnalPosOne:grid1 posTwo:grid2 posThree:grid3])
+                            return YES;
+                    }
+                }
+            }
         }
     }
-    return sumOfRows == 4 && sumOfCols == 4;
+    
+    return NO;
+}
+
+-(BOOL)isDiagnalPosOne:(CellGridPosition)pos1 posTwo:(CellGridPosition)pos2 posThree:(CellGridPosition)pos3
+{
+    BOOL temp1 = (pos1.row - pos2.row) == (pos2.row - pos3.row);
+    BOOL temp2 = (pos1.column - pos2.column) == (pos2.column - pos3.column);
+    return temp1 && temp2;
 }
 
 -(BOOL)cellSelectedCorrectly:(NSMutableArray *)selectedCells
