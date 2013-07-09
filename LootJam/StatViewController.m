@@ -14,12 +14,144 @@
 #import "AppDelegate.h"
 #import "GameViewController.h"
 #import "GameViewControllerIpad.h"
+#import "TutorialViewController.h"
 
 @interface StatViewController ()
 
 @end
 
 @implementation StatViewController
+
+- (IBAction)onLeftBarbarianTapped:(id)sender {
+    [self.leftPlayerLabel setText:@"Barbarian"];
+    
+    [self.player1hp setText:@"25"];
+    [self.player1atk setText:@"2"];
+    [self.player1mag setText:@"-1"];
+    [self.player1chg setText:@"0"];
+    [self.player1dis setText:@"0"];
+    [self.player1hth setText:@"0"];
+    [self.player1magicdelay setText:@"1"];
+    [self.player1chargesize setText:@"5"];
+}
+
+- (IBAction)onLeftElfTapped:(id)sender {
+    [self.leftPlayerLabel setText:@"Elf"];
+    
+    [self.player1hp setText:@"27"];
+    [self.player1atk setText:@"0"];
+    [self.player1mag setText:@"0"];
+    [self.player1chg setText:@"0"];
+    [self.player1dis setText:@"0"];
+    [self.player1hth setText:@"1"];
+    [self.player1magicdelay setText:@"1"];
+    [self.player1chargesize setText:@"6"];
+}
+
+- (IBAction)onLeftMageTapped:(id)sender {
+    [self.leftPlayerLabel setText:@"Mage"];
+    
+    [self.player1hp setText:@"25"];
+    [self.player1atk setText:@"-1"];
+    [self.player1mag setText:@"2"];
+    [self.player1chg setText:@"0"];
+    [self.player1dis setText:@"0"];
+    [self.player1hth setText:@"0"];
+    [self.player1magicdelay setText:@"1"];
+    [self.player1chargesize setText:@"5"];
+}
+
+- (IBAction)onLeftAlchemistTapped:(id)sender {
+    [self.leftPlayerLabel setText:@"Alchemist"];
+    
+    [self.player1hp setText:@"25"];
+    [self.player1atk setText:@"0"];
+    [self.player1mag setText:@"0"];
+    [self.player1chg setText:@"0"];
+    [self.player1dis setText:@"1"];
+    [self.player1hth setText:@"0"];
+    [self.player1magicdelay setText:@"2"];
+    [self.player1chargesize setText:@"5"];
+}
+
+- (IBAction)onLeftMonkTapped:(id)sender {
+    [self.leftPlayerLabel setText:@"Monk"];
+    
+    [self.player1hp setText:@"25"];
+    [self.player1atk setText:@"0"];
+    [self.player1mag setText:@"0"];
+    [self.player1chg setText:@"3"];
+    [self.player1dis setText:@"0"];
+    [self.player1hth setText:@"-1"];
+    [self.player1magicdelay setText:@"1"];
+    [self.player1chargesize setText:@"5"];
+    
+}
+
+- (IBAction)onRightBarbarianTapped:(id)sender {
+    [self.rightPlayerLabel setText:@"Barbarian"];
+    
+    [self.player2hp setText:@"25"];
+    [self.player2atk setText:@"2"];
+    [self.player2mag setText:@"-1"];
+    [self.player2chg setText:@"0"];
+    [self.player2dis setText:@"0"];
+    [self.player2hth setText:@"0"];
+    [self.player2magicdelay setText:@"1"];
+    [self.player2chargesize setText:@"5"];
+    
+}
+
+- (IBAction)onRightElfTapped:(id)sender {
+    [self.rightPlayerLabel setText:@"Elf"];
+    
+    [self.player2hp setText:@"27"];
+    [self.player2atk setText:@"0"];
+    [self.player2mag setText:@"0"];
+    [self.player2chg setText:@"0"];
+    [self.player2dis setText:@"0"];
+    [self.player2hth setText:@"1"];
+    [self.player2magicdelay setText:@"1"];
+    [self.player2chargesize setText:@"6"];
+}
+
+- (IBAction)onRightMageTapped:(id)sender {
+    [self.rightPlayerLabel setText:@"Mage"];
+    
+    [self.player2hp setText:@"25"];
+    [self.player2atk setText:@"-1"];
+    [self.player2mag setText:@"2"];
+    [self.player2chg setText:@"0"];
+    [self.player2dis setText:@"0"];
+    [self.player2hth setText:@"0"];
+    [self.player2magicdelay setText:@"1"];
+    [self.player2chargesize setText:@"5"];
+    
+}
+- (IBAction)onRightAlchemistTapped:(id)sender {
+    [self.rightPlayerLabel setText:@"Alchemist"];
+    
+    [self.player2hp setText:@"25"];
+    [self.player2atk setText:@"0"];
+    [self.player2mag setText:@"0"];
+    [self.player2chg setText:@"0"];
+    [self.player2dis setText:@"1"];
+    [self.player2hth setText:@"0"];
+    [self.player2magicdelay setText:@"2"];
+    [self.player2chargesize setText:@"5"];
+}
+- (IBAction)onRightMonkTapped:(id)sender {
+    [self.rightPlayerLabel setText:@"Monk"];
+    
+    [self.player2hp setText:@"25"];
+    [self.player2atk setText:@"0"];
+    [self.player2mag setText:@"0"];
+    [self.player2chg setText:@"3"];
+    [self.player2dis setText:@"0"];
+    [self.player2hth setText:@"-1"];
+    [self.player2magicdelay setText:@"1"];
+    [self.player2chargesize setText:@"5"];
+}
 
 - (void)viewDidLoad
 {
@@ -116,9 +248,47 @@
 {
     return rand() % (max_n - min_n + 1) + min_n;
 }
+- (IBAction)clickedTutorialButton:(id)sender {
+    if ([self.leftPlayerLabel.text isEqual:@""] || [self.rightPlayerLabel.text isEqual:@""]) {
+        
+        UIAlertView *uiAlert = [[UIAlertView alloc] initWithTitle:@"Select Players" message:@"Please Select two destinies even for tutorial purposes!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [uiAlert show];
+        return;
+    }
+    
+    GameViewController* gameController;
+    int size = [self.gameSize.text intValue];
+    if (size <= 0) size = 4;
+    int limit = [self.gameLimit.text intValue];
+    if (limit <= 2) limit = 2;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        gameController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil andRows:size andCols:size andCellLimit:limit];
+    } else {
+        gameController = (GameViewController*)[[GameViewControllerIpad alloc] initWithNibName:@"GameViewControllerIpad" bundle:nil andRows:size andCols:size andCellLimit:limit];
+    }
+    
+    gameController.isTutorial = YES;
+    
+    gameController.view.userInteractionEnabled = NO;
+    // Pass the parameters
+    [gameController injectPlayerStatForPlayerOne:player1stats andPlayerTwo:player2stats];
+    
+    AppDelegate* delegate = [UIApplication sharedApplication].delegate;
+    
+    [delegate.navController pushViewController:gameController animated:YES];
+    
+}
 
 - (IBAction) clickedPlayButton:(id)sender
 {
+    if ([self.leftPlayerLabel.text isEqual:@""] || [self.rightPlayerLabel.text isEqual:@""]) {
+        
+        UIAlertView *uiAlert = [[UIAlertView alloc] initWithTitle:@"Select Players" message:@"Please Select two destinies!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [uiAlert show];
+        return;
+    }
+    
     GameViewController* gameController;
     int size = [self.gameSize.text intValue];
     if (size <= 0) size = 4;

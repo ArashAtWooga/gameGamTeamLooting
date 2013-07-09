@@ -25,6 +25,11 @@
 }
 - (IBAction)onResetTapped:(id)sender;
 
+@property (nonatomic) BOOL isTutorial;
+@property (strong, nonatomic) IBOutlet UIView *tutorialView;
+@property (weak, nonatomic) IBOutlet UILabel *tutorialLabel;
+
+
 @property (strong, nonatomic) IBOutlet UIImageView *firstSelectedCell;
 @property (strong, nonatomic) IBOutlet UIImageView *secondSelectedCell;
 @property (strong, nonatomic) IBOutlet UIImageView *thirdSelectedCell;

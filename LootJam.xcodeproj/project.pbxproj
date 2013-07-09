@@ -259,6 +259,18 @@
 		D9CC0F891786C7A10095B34B /* time_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CC0E761786C7A10095B34B /* time_orange.png */; };
 		D9CC0F8A1786C7A10095B34B /* time_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CC0E771786C7A10095B34B /* time_purple.png */; };
 		D9CC0F8B1786C7A10095B34B /* time_red.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CC0E781786C7A10095B34B /* time_red.png */; };
+		D9FAEA1E178C4C7B00893008 /* wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA1D178C4C7B00893008 /* wall.jpg */; };
+		D9FAEA2B178C4FD400893008 /* AboutusButton00.png in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA27178C4FD400893008 /* AboutusButton00.png */; };
+		D9FAEA2C178C4FD400893008 /* AboutusButton00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA28178C4FD400893008 /* AboutusButton00@2x.png */; };
+		D9FAEA2D178C4FD400893008 /* AboutusButton00iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA29178C4FD400893008 /* AboutusButton00iPad.png */; };
+		D9FAEA2E178C4FD400893008 /* AboutusButton00iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA2A178C4FD400893008 /* AboutusButton00iPad@2x.png */; };
+		D9FAEA35178C565F00893008 /* alchemist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA30178C565F00893008 /* alchemist.jpg */; };
+		D9FAEA36178C565F00893008 /* mage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA31178C565F00893008 /* mage.jpg */; };
+		D9FAEA37178C565F00893008 /* barbarian.gif in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA32178C565F00893008 /* barbarian.gif */; };
+		D9FAEA38178C565F00893008 /* monk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA33178C565F00893008 /* monk.jpg */; };
+		D9FAEA39178C565F00893008 /* elf.gif in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA34178C565F00893008 /* elf.gif */; };
+		D9FAEA3D178C660A00893008 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FAEA3B178C660A00893008 /* TutorialViewController.m */; };
+		D9FAEA3E178C660A00893008 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9FAEA3C178C660A00893008 /* TutorialViewController.xib */; };
 		D9FD7BB21785E05A00883C99 /* damageconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9FD7BB11785E05A00883C99 /* damageconfig.plist */; };
 		D9FD7BB31785E56200883C99 /* CharacterInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FD7BA91785E01300883C99 /* CharacterInstance.m */; };
 		D9FD7BB41785E56500883C99 /* CharacterStats.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FD7BAB1785E01300883C99 /* CharacterStats.m */; };
@@ -529,6 +541,19 @@
 		D9CC0E761786C7A10095B34B /* time_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_orange.png; sourceTree = "<group>"; };
 		D9CC0E771786C7A10095B34B /* time_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_purple.png; sourceTree = "<group>"; };
 		D9CC0E781786C7A10095B34B /* time_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_red.png; sourceTree = "<group>"; };
+		D9FAEA1D178C4C7B00893008 /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
+		D9FAEA27178C4FD400893008 /* AboutusButton00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutusButton00.png; sourceTree = "<group>"; };
+		D9FAEA28178C4FD400893008 /* AboutusButton00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutusButton00@2x.png"; sourceTree = "<group>"; };
+		D9FAEA29178C4FD400893008 /* AboutusButton00iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutusButton00iPad.png; sourceTree = "<group>"; };
+		D9FAEA2A178C4FD400893008 /* AboutusButton00iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutusButton00iPad@2x.png"; sourceTree = "<group>"; };
+		D9FAEA30178C565F00893008 /* alchemist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alchemist.jpg; sourceTree = "<group>"; };
+		D9FAEA31178C565F00893008 /* mage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mage.jpg; sourceTree = "<group>"; };
+		D9FAEA32178C565F00893008 /* barbarian.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = barbarian.gif; sourceTree = "<group>"; };
+		D9FAEA33178C565F00893008 /* monk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monk.jpg; sourceTree = "<group>"; };
+		D9FAEA34178C565F00893008 /* elf.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = elf.gif; sourceTree = "<group>"; };
+		D9FAEA3A178C660A00893008 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		D9FAEA3B178C660A00893008 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		D9FAEA3C178C660A00893008 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		D9FD7BA81785E01300883C99 /* CharacterInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterInstance.h; sourceTree = "<group>"; };
 		D9FD7BA91785E01300883C99 /* CharacterInstance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterInstance.m; sourceTree = "<group>"; };
 		D9FD7BAA1785E01300883C99 /* CharacterStats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterStats.h; sourceTree = "<group>"; };
@@ -592,6 +617,9 @@
 				D93ED82517849F6600DB0490 /* views */,
 				D93ED80A17848CC700DB0490 /* AppDelegate.h */,
 				D93ED80B17848CC700DB0490 /* AppDelegate.m */,
+				D9FAEA3A178C660A00893008 /* TutorialViewController.h */,
+				D9FAEA3B178C660A00893008 /* TutorialViewController.m */,
+				D9FAEA3C178C660A00893008 /* TutorialViewController.xib */,
 				D93ED822178497D700DB0490 /* GameViewController.h */,
 				D93ED823178497D700DB0490 /* GameViewController.m */,
 				D93ED820178497B200DB0490 /* GameViewController.xib */,
@@ -627,6 +655,12 @@
 		D93ED82E1784A84C00DB0490 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9FAEA2F178C565200893008 /* characters */,
+				D9FAEA27178C4FD400893008 /* AboutusButton00.png */,
+				D9FAEA28178C4FD400893008 /* AboutusButton00@2x.png */,
+				D9FAEA29178C4FD400893008 /* AboutusButton00iPad.png */,
+				D9FAEA2A178C4FD400893008 /* AboutusButton00iPad@2x.png */,
+				D9FAEA1D178C4C7B00893008 /* wall.jpg */,
 				D9154C5C1787154900DD579A /* Dungeon_logo-1.png */,
 				D9CC0D621786C7A00095B34B /* gems_iPad */,
 				D9CC0DA61786C7A00095B34B /* gems_iPad_HD */,
@@ -906,6 +940,18 @@
 				D9CC0E781786C7A10095B34B /* time_red.png */,
 			);
 			path = gems_iPhone_HD;
+			sourceTree = "<group>";
+		};
+		D9FAEA2F178C565200893008 /* characters */ = {
+			isa = PBXGroup;
+			children = (
+				D9FAEA30178C565F00893008 /* alchemist.jpg */,
+				D9FAEA31178C565F00893008 /* mage.jpg */,
+				D9FAEA32178C565F00893008 /* barbarian.gif */,
+				D9FAEA33178C565F00893008 /* monk.jpg */,
+				D9FAEA34178C565F00893008 /* elf.gif */,
+			);
+			name = characters;
 			sourceTree = "<group>";
 		};
 		D9FD7BA71785DFF400883C99 /* Adam */ = {
@@ -1223,6 +1269,17 @@
 				D9154C5B17870EEF00DD579A /* Dungeon_logo.png in Resources */,
 				D9154C5D1787154900DD579A /* Dungeon_logo-1.png in Resources */,
 				D9154C5F1787157200DD579A /* Dungeon_logo-1.png in Resources */,
+				D9FAEA1E178C4C7B00893008 /* wall.jpg in Resources */,
+				D9FAEA2B178C4FD400893008 /* AboutusButton00.png in Resources */,
+				D9FAEA2C178C4FD400893008 /* AboutusButton00@2x.png in Resources */,
+				D9FAEA2D178C4FD400893008 /* AboutusButton00iPad.png in Resources */,
+				D9FAEA2E178C4FD400893008 /* AboutusButton00iPad@2x.png in Resources */,
+				D9FAEA35178C565F00893008 /* alchemist.jpg in Resources */,
+				D9FAEA36178C565F00893008 /* mage.jpg in Resources */,
+				D9FAEA37178C565F00893008 /* barbarian.gif in Resources */,
+				D9FAEA38178C565F00893008 /* monk.jpg in Resources */,
+				D9FAEA39178C565F00893008 /* elf.gif in Resources */,
+				D9FAEA3E178C660A00893008 /* TutorialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1301,7 @@
 				D9FD7BB61785E56C00883C99 /* StatViewController.m in Sources */,
 				D9CC0CD61786BA710095B34B /* StatViewControllerIpad.m in Sources */,
 				D9CC0CDB1786BC390095B34B /* GameViewControllerIpad.m in Sources */,
+				D9FAEA3D178C660A00893008 /* TutorialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

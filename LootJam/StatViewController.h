@@ -13,6 +13,8 @@
     CharacterStats* player1stats;
     CharacterStats* player2stats;
 }
+@property (weak, nonatomic) IBOutlet UILabel *leftPlayerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightPlayerLabel;
 
 @property IBOutlet UITextField* player1hp;
 @property IBOutlet UITextField* player1atk;
@@ -34,6 +36,26 @@
 
 @property IBOutlet UITextField* gameSize;
 @property IBOutlet UITextField* gameLimit;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *leftBarbarianBut;
+@property (weak, nonatomic) IBOutlet UIButton *leftElfBut;
+@property (weak, nonatomic) IBOutlet UIButton *leftMonkBut;
+@property (weak, nonatomic) IBOutlet UIButton *leftMageBut;
+@property (weak, nonatomic) IBOutlet UIButton *leftAlchemistBut;
+
+- (IBAction)onLeftBarbarianTapped:(id)sender;
+- (IBAction)onLeftElfTapped:(id)sender;
+- (IBAction)onLeftMageTapped:(id)sender;
+- (IBAction)onLeftAlchemistTapped:(id)sender;
+- (IBAction)onLeftMonkTapped:(id)sender;
+
+- (IBAction)onRightBarbarianTapped:(id)sender;
+- (IBAction)onRightElfTapped:(id)sender;
+- (IBAction)onRightMageTapped:(id)sender;
+- (IBAction)onRightAlchemistTapped:(id)sender;
+- (IBAction)onRightMonkTapped:(id)sender;
+
 
 - (IBAction) clickedPlayButton:(id)sender;
 

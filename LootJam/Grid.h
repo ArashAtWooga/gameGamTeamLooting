@@ -45,6 +45,7 @@ typedef struct  {
 -(id)initGridWithRows:(int)numberOfRows andColumns:(int)numberOfColumns andCellSize:(float)size andCellLimit:(int)cellTypes;
 -(void)drawGridInView:(UIView *)view atPosition:(CGPoint)point;
 -(void)updateDisabledCell:(NSArray *)disabled;
+-(void)TouchCellInRow:(int)row andCol:(int)col;
 
 
 @end

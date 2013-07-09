@@ -359,6 +359,20 @@
     
 }
 
+-(void)TouchCellInRow:(int)row andCol:(int)col
+{
+    Cell *selectedCell = [self cellAtRow:row andColumn:col];
+    
+    if ([_selectedCells containsObject:selectedCell]) {
+        return;
+    } else {
+        [_selectedCells addObject:selectedCell];
+        [selectedCell switchToSelected];
+    }
+    
+    [self processTurn];
+}
+
 -(void)onTouchOnCellEnded:(id)cell
 {
     if ([_selectedCells count] == 3) {

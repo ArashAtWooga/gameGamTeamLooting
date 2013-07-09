@@ -48,6 +48,47 @@
     return self;
 }
 
+-(void)TutorialPhaseOne
+{
+    self.tutorialView.frame = CGRectMake(100, 100, self.tutorialView.frame.size.width, self.tutorialView.frame.size.height);
+    [self.tutorialLabel setText:@"first player chooses three"];
+}
+
+-(void)tutorialPhaseTwo
+{
+    
+}
+
+-(void)tutorialPhaseThree
+{
+    
+}
+
+-(void)tutorialPhaseFour
+{
+    
+}
+
+-(void)tutorialPhaseFive
+{
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+//    [self.view addSubview:self.tutorialView];
+//    self.tutorialView.frame = CGRectMake(-200, 100, self.tutorialView.frame.size.width, self.tutorialView.frame.size.height);
+//    [UIView animateWithDuration:2 animations:^{
+//        [self TutorialPhaseOne];
+//    } completion:^(BOOL finished) {
+//        if (finished) {
+//            [self tutorialPhaseTwo];
+//        }
+//    }];
+}
+
+
+
 -(void)injectPlayerStatForPlayerOne:(CharacterStats *)player1 andPlayerTwo:(CharacterStats *)playerTwo
 {
     [self initatePlayers:player1  andPlayerTwo:playerTwo];

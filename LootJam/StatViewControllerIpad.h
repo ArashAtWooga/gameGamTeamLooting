@@ -10,4 +10,7 @@
 
 @interface StatViewControllerIpad : StatViewController
 
+
+
+
 @end
