@@ -142,13 +142,20 @@
 -(void)switchToSelected
 {
     _isSelected = YES;
-    self.backgroundColor = [UIColor brownColor];
+    [UIView animateWithDuration:.5 animations:^{
+        self.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(0.6, 0.6), 45);
+    }];
+//    self.backgroundColor = [UIColor brownColor];
 }
 
 -(void)switchToDeselected
 {
     _isSelected = NO;
-    self.backgroundColor = [UIColor clearColor];
+    [UIView animateWithDuration:.5 animations:^{
+        self.transform = CGAffineTransformMakeScale(1.0, 1.0);
+        self.transform = CGAffineTransformMakeRotation(0);
+    }];
+//    self.backgroundColor = [UIColor clearColor];
 }
 
 //2

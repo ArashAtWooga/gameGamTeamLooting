@@ -208,7 +208,6 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     player1stats.maxHP = [self.player1hp.text intValue];
-    
     player1stats.attackDamageBonus = [self.player1atk.text intValue];
     player1stats.magicDamageBonus = [self.player1mag.text intValue];
     player1stats.chargeDamageBonus = [self.player1chg.text intValue];
@@ -249,12 +248,15 @@
     return rand() % (max_n - min_n + 1) + min_n;
 }
 - (IBAction)clickedTutorialButton:(id)sender {
+    
     if ([self.leftPlayerLabel.text isEqual:@""] || [self.rightPlayerLabel.text isEqual:@""]) {
         
         UIAlertView *uiAlert = [[UIAlertView alloc] initWithTitle:@"Select Players" message:@"Please Select two destinies even for tutorial purposes!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [uiAlert show];
         return;
     }
+    
+
     
     GameViewController* gameController;
     int size = [self.gameSize.text intValue];
@@ -288,6 +290,27 @@
         [uiAlert show];
         return;
     }
+    
+    player1stats.maxHP = [self.player1hp.text intValue];
+    player1stats.attackDamageBonus = [self.player1atk.text intValue];
+    player1stats.magicDamageBonus = [self.player1mag.text intValue];
+    player1stats.chargeDamageBonus = [self.player1chg.text intValue];
+    player1stats.disableChanceBonus = [self.player1dis.text intValue];
+    player1stats.healthBonus = [self.player1hth.text intValue];
+    
+    player1stats.chargeMeterSize = [self.player1chargesize.text intValue];
+    player1stats.magicCooldown = [self.player1magicdelay.text intValue];
+    
+    
+    player2stats.maxHP = [self.player2hp.text intValue];
+    
+    player2stats.attackDamageBonus = [self.player2atk.text intValue];
+    player2stats.magicDamageBonus = [self.player2mag.text intValue];
+    player2stats.chargeDamageBonus = [self.player2chg.text intValue];
+    player2stats.disableChanceBonus = [self.player2dis.text intValue];
+    player2stats.healthBonus = [self.player2hth.text intValue];
+    player2stats.chargeMeterSize = [self.player2chargesize.text intValue];
+    player2stats.magicCooldown = [self.player2magicdelay.text intValue];
     
     GameViewController* gameController;
     int size = [self.gameSize.text intValue];
