@@ -375,7 +375,7 @@
 
 -(void)onTouchOnCellEnded:(id)cell
 {
-    if ([_selectedCells count] >= 3) {
+    if ([_selectedCells count] == 3) {
         for (Cell *cell in _selectedCells) {
             NSLog(@"Selected: %@", [cell stringCellType:[cell cellType]]);
         }
@@ -388,6 +388,12 @@
         }
 
         [self processTurn];
+    }
+    
+    if ([_selectedCells count] > 3) {
+        for (Cell *cell in _selectedCells) {
+            [cell switchToDeselected];
+        }
     }
 }
 
